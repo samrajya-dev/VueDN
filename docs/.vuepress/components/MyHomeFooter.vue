@@ -2,13 +2,13 @@
   <div class="push"></div>
   <div class="footer center">
     <div>
-      Released under the <a href="https://choosealicense.com/licenses/mit/" target="_blank">MIT License</a>
+      🌸🪷🌷🌼🌻
     </div>
     <div>
-      By <a href="https://md.engineer" target="_blank">Stan_MD</a> | AD {{ year }}
+      <a href="https://samrajya.dev" target="_blank">SAMRAJYA</a> 🍏 {{ year }}
     </div>
     <div>
-      <a href="https://github.com/NdagiStanley/VueDN " target="_blank">GitHub Repository</a>
+      🔗 <a href="https://linkedin.com/in/samrajya" target="_blank">LinkedIn</a> | <a href="https://github.com/samrajya-dev " target="_blank"></a>
     </div>
   </div>
 </template>
