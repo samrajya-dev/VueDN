@@ -1,6 +1,6 @@
 ---
 home: true
-title: Vuepress-Decap-Netlify
+title: Welcome
 tagline: A Vuepress boilerplate integrated with Decap CMS hosted on Netlify
 heroText: Vuepress-Decap-Netlify
 heroImage: hero.png
@@ -12,7 +12,17 @@ actions:
 
 <div class="center">
 <div class="spaced">
-  This template is built on VuePress, allow access and editing via DecapCMS, and is hosted on Netlify. <br><b>"Songs?"</b> you wonder... <a href="https://md.engineer/" target="_blank">The author</a> uses <a href="/songs/">songs</a> (as an example of content)
+  
+👋 Hey there! 🌟 <br>
+I'm Samrajya, Full-Stack Developer & Cloud DevOps Engineer 💻🔧<br>
+I build innovative solutions. 🧠💼<br>
+Email: hello@samrajya.dev. 📧<br>
+<a href="https://linkedin.com/in/samrajya" target="_blank">LinkedIn</a>
+Connect with me on Instagram, Twitter, LinkedIn to stay in the loop. 💼<br>
+Join me on extraordinary journey. 🚀✨<br>
+Let's make wonders happen together! 💪🤝<br>
+Cheers! 👀 S.<br>
+  
 </div>
 <div class="spaced">
   To use the CMS, <a href="/template/#setup">set up this template</a>, head to <a href="/admin/" target="_blank"><code>/admin/</code> path on your site</a>, and login.
