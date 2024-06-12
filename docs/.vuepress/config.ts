@@ -8,6 +8,10 @@ let songFiles = glob
   .sync("docs/songs/**/*.md")
   .map((f) => f.replace("docs", "").replace("index.md", ""));
 
+let postFiles = glob
+  .sync("docs/blogs/**/*.md")
+  .map((f) => f.replace("docs", "").replace("index.md", ""));
+
 import { description } from "../../package.json";
 
 const __dirname = getDirname(import.meta.url);
@@ -37,9 +41,13 @@ export default defineUserConfig({
     notFound: ["We can't seem to find the page you're looking for."],
     navbar: [
       {
-        text: "Blogs",
+        text: "Songs",
         // notice the trailing / (for the automatic next and prev links based on the sidebar)
         link: "/songs/",
+      },
+      {
+        text: "Blogs",
+        link: "/blogs/",
       },
       {
         text: "template guide",
@@ -55,10 +63,16 @@ export default defineUserConfig({
     sidebar: {
       "/songs": [
         {
-          text: "Blogs",
+          text: "Songs",
           children: songFiles,
         },
       ],
+      "/blogs": [
+        {
+          text: "Blogs",
+          children: postFiles,
+        }
+      ]
     },
   }),
 
