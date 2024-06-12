@@ -9,22 +9,22 @@ backend:
 
 # https://decapcms.org/docs/configuration-options/
 publish_mode: editorial_workflow
-display_url: https://vuedn.netlify.app/
-media_folder: "docs/.vuepress/public/media" # Media files will be stored in the repo under docs/.vuepress/public/media
+display_url: https://samrajya.dev/
+media_folder: "public/media" # Media files will be stored in the repo under docs/.vuepress/public/media
 public_folder: "/media" # The src attribute for uploaded media will begin with /media
 editor:
-  preview: false # disabled markdown preview in CMS
+  preview: true # disabled markdown preview in CMS
 collections:
   - name: "songs" # Used in routes, e.g., /admin/collections/songs
-    label: "Songs" # Used in the UI
-    label_singular: Song
+    label: "Blogs" # Used in the UI
+    label_singular: Blog
     folder: "docs/songs" # The path to the folder where the documents are stored
     nested: # adding a nested object will show the collection folder structure
       depth: 2 # max depth to show in the collection tree
     create: true # Allow users to create new documents in this collection
     slug: "{{date}}/index" # Filename template # Outputs sun-apr-02-2023-01-13-17-gmt-0300-east-africa-time (not ideal but is dynamic to date - only at creation not at editing)
     summary: "{{dirname}} . Last updated at {{commit_date}}"
-    preview_path: songs/{{date}}
+    preview_path: blogs/{{date}}
     fields: # The fields for each document, usually in front matter
       - {label: "lastUpdated", name: "lastUpdated", widget: "hidden", default: true}
       - {label: "contributors", hint: "Show contributors at the footer", name: "contributors", widget: "boolean", default: true}
@@ -33,6 +33,6 @@ collections:
         name: "date"
         widget: "datetime"
         format: 'YYYY-MM-DD'
-        time_format: false
+        time_format: true
         required: true
-      - {label: "Body", name: "body", widget: "markdown", default: "# Song title (Composer/ Artist)"}
+      - {label: "Body", name: "body", widget: "markdown", default: "# today's blog title - what's in your mind Dev?"}
