@@ -12,8 +12,14 @@ T﻿his is the testing of Text editor Rich Text and Markdown.
 
 custom self developed cms system
 
-S﻿tatus: Draft - ok
+S﻿tatus: 
 
+Draft - ok
 
+I﻿n review - ok
+
+P﻿ublish - ok
+
+E﻿ditor - several errors need improvement
 
 \-﻿ Dev S.
