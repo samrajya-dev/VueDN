@@ -18,7 +18,7 @@ editor:
   preview: true # disabled markdown preview in CMS
 
 collections:
-  - name: "posts" # Used in routes, e.g., /admin/collections/songs
+  - name: "blogs" # Used in routes, e.g., /admin/collections/songs
     label: "Posts" # Used in the UI
     label_singular: Post
     folder: "docs/blogs" # The path to the folder where the documents are stored
