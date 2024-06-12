@@ -4,9 +4,9 @@ import { searchPlugin } from "@vuepress/plugin-search";
 import { getDirname, path } from "@vuepress/utils";
 import { glob } from "glob";
 
-let songFiles = glob
-  .sync("docs/songs/**/*.md")
-  .map((f) => f.replace("docs", "").replace("index.md", ""));
+// let songFiles = glob
+//   .sync("docs/songs/**/*.md")
+//   .map((f) => f.replace("docs", "").replace("index.md", ""));
 
 let postFiles = glob
   .sync("docs/blogs/**/*.md")
@@ -40,11 +40,11 @@ export default defineUserConfig({
     logo: "SD-logo.png",
     notFound: ["We can't seem to find the page you're looking for."],
     navbar: [
-      {
-        text: "Songs",
-        // notice the trailing / (for the automatic next and prev links based on the sidebar)
-        link: "/songs/",
-      },
+      // {
+      //   text: "Songs",
+      //   // notice the trailing / (for the automatic next and prev links based on the sidebar)
+      //   link: "/songs/",
+      // },
       {
         text: "Blogs",
         link: "/blogs/",
@@ -61,12 +61,12 @@ export default defineUserConfig({
     // notice there's a difference between /songs and /songs/
     // We have the /songs to enable this sidebar for /songs and /songs/ paths
     sidebar: {
-      "/songs": [
-        {
-          text: "Songs",
-          children: songFiles,
-        },
-      ],
+      // "/songs": [
+      //   {
+      //     text: "Songs",
+      //     children: songFiles,
+      //   },
+      // ],
       "/blogs": [
         {
           text: "Blogs",
