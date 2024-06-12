@@ -10,4 +10,10 @@ F﻿irst Check-in as Dev here gonna enjoy this journey through out the life.
 
 T﻿his is the testing of Text editor Rich Text and Markdown.
 
+custom self developed cms system
+
+S﻿tatus: Draft - ok
+
+
+
 \-﻿ Dev S.
