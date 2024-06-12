@@ -6,6 +6,7 @@
   "author": "(Stanley Ndagi <stan@md.engineer>)",
   "license": "MIT",
   "scripts": {
+    "serve": "vue-cli-service serve",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },

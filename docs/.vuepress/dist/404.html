@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.61">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script><title>Dev Samrajya.</title><meta name="description" content="Vuepress boilerplate integrated with Decap CMS hosted on Netlify">
+    <link rel="preload" href="/assets/style-41dd3cd7.css" as="style"><link rel="stylesheet" href="/assets/style-41dd3cd7.css">
+    <link rel="modulepreload" href="/assets/app-f334a114.js"><link rel="modulepreload" href="/assets/framework-5866ffd3.js"><link rel="modulepreload" href="/assets/404.html-60b35caa.js"><link rel="modulepreload" href="/assets/404.html-87d54bd8.js"><link rel="prefetch" href="/assets/index.html-5c973a72.js" as="script"><link rel="prefetch" href="/assets/index.html-6430074b.js" as="script"><link rel="prefetch" href="/assets/index.html-4341a9f8.js" as="script"><link rel="prefetch" href="/assets/index.html-b7847fc8.js" as="script"><link rel="prefetch" href="/assets/index.html-119df5c0.js" as="script"><link rel="prefetch" href="/assets/index.html-8df9b898.js" as="script"><link rel="prefetch" href="/assets/index.html-38d192fd.js" as="script"><link rel="prefetch" href="/assets/index.html-6970dd40.js" as="script"><link rel="prefetch" href="/assets/index.html-0a76243d.js" as="script"><link rel="prefetch" href="/assets/index.html-fd579302.js" as="script"><link rel="prefetch" href="/assets/CustomFooter-d2698bf2.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><main class="page"><div class="theme-default-content"><h1>404</h1><blockquote>There&#39;s nothing here. If you&#39;re looking for DecapCMS, manually enter `/admin` to the root site path to navigate directly to it.</blockquote><a href="/" class="">Take me home</a></div></main></div><!----><!--]--></div>
+    <script type="module" src="/assets/app-f334a114.js" defer></script>
+  </body>
+</html>

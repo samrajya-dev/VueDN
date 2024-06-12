@@ -1,0 +1,3 @@
+import{_ as s,p as n,q as o,R as e,Q as t,t as a}from"./framework-5866ffd3.js";const r={},c=e("div",{class:"center"},[t(' <div class="spaced"> '),e("p",null,[a("Join me on extraordinary journey. 🚀✨"),e("br"),a(" Cheers! 👀 S."),e("br")]),t(" </div> "),e("div",{class:"spaced"},[t(` To use the CMS, <a href="/template/#setup">set up this template</a>, head to <a href="/admin/" target="_blank"><code>/admin/</code> path on your site</a>, and login.
+  <br>Otherwise, get a feel of the CMS <a href="https://cms-demo.netlify.com/" target="_blank">here</a>. 
+  `)])],-1),d=[c];function i(l,_){return n(),o("div",null,d)}const m=s(r,[["render",i],["__file","index.html.vue"]]);export{m as default};

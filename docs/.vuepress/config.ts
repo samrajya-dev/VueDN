@@ -17,7 +17,7 @@ export default defineUserConfig({
   // Global title in HTML <head>.
   // If page has title (in frontmatter) or h1 then: <page title/h1> | <global title>
   // e.g <title>Vuepress-DecapCMS-Netlify | VueDN</title>
-  title: "VueDN",
+  title: "Dev Samrajya.",
   // Global description in in HTML <head>.
   // If page has description (in frontmatter) then: <global description is replaced by <page description>
   // <meta name="description" content="...">
@@ -33,11 +33,11 @@ export default defineUserConfig({
 
   // theme and its config
   theme: defaultTheme({
-    logo: "vue.png",
+    logo: "SD-logo.png",
     notFound: ["There's nothing here. If you're looking for DecapCMS, manually enter `/admin` to the root site path to navigate directly to it."],
     navbar: [
       {
-        text: "Songs",
+        text: "Blogs",
         // notice the trailing / (for the automatic next and prev links based on the sidebar)
         link: "/songs/",
       },
@@ -47,7 +47,7 @@ export default defineUserConfig({
       },
       {
         text: "GitHub",
-        link: "https://github.com/NdagiStanley/VueDN",
+        link: "https://github.com/samrajya-dev",
       },
     ],
     // notice there's a difference between /songs and /songs/
@@ -55,7 +55,7 @@ export default defineUserConfig({
     sidebar: {
       "/songs": [
         {
-          text: "Songs",
+          text: "Blogs",
           children: songFiles,
         },
       ],
