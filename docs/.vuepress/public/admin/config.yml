@@ -1,8 +1,8 @@
 # https://decapcms.org/docs/backends-overview/
 backend:
   name: git-gateway # adds users without giving them direct write access to your GitHub or GitLab repository.
-  branch: main # default: master
-  cms_label_prefix: decap-cms # default: netlify-cms/
+  branch: main
+  cms_label_prefix: decap-cms
   # Options:
   # name: github/gitlab/bitbucket # all users added must have push access to your content repository.
   # repo: owner-name/repo-name # Path to your GitHub repository
@@ -15,19 +15,19 @@ media_folder: "docs/.vuepress/public/media" # Media files will be stored in the 
 public_folder: "/media" # The src attribute for uploaded media will begin with /media
 
 editor:
-  preview: true # disabled markdown preview in CMS
+  preview: true
 
 collections:
   - name: "blogs" # Used in routes, e.g., /admin/collections/songs
-    label: "Posts" # Used in the UI
+    label: "Posts"
     label_singular: Post
-    folder: "docs/blogs" # The path to the folder where the documents are stored
-    nested: # adding a nested object will show the collection folder structure
-      depth: 2 # max depth to show in the collection tree
+    folder: "docs/blogs"
     create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template # Outputs sun-apr-02-2023-01-13-17-gmt-0300-east-africa-time (not ideal but is dynamic to date - only at creation not at editing)
-    summary: "{{dirname}} . Last updated at {{commit_date}}"
+    slug: "{{slug}}"
+    summary: "{{serial}}. {{title}} {{publish_date | formatDate('DD MMMM YYYY')}}"
     preview_path: blogs/{{slug}}
+    nested: 
+      depth: 2
     fields: # The fields for each document, usually in front matter
       - {label: "lastUpdated", name: "lastUpdated", widget: "hidden", default: true}
       - { label: "Title", name: "title", widget: "string" }
