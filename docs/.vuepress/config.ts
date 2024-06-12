@@ -34,7 +34,7 @@ export default defineUserConfig({
   // theme and its config
   theme: defaultTheme({
     logo: "SD-logo.png",
-    notFound: ["There's nothing here. If you're looking for DecapCMS, manually enter `/admin` to the root site path to navigate directly to it."],
+    notFound: ["We can't seem to find the page you're looking for."],
     navbar: [
       {
         text: "Blogs",
@@ -42,7 +42,7 @@ export default defineUserConfig({
         link: "/songs/",
       },
       {
-        text: "Using this template",
+        text: "template guide",
         link: "/template/",
       },
       {

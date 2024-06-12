@@ -1,6 +1,6 @@
 ---
-contributors: false
-lastUpdated: false
+contributors: true
+lastUpdated: true
 ---
 
 # Using this template
