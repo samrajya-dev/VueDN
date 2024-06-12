@@ -23,3 +23,12 @@ P﻿ublish - ok
 E﻿ditor - several errors need improvement
 
 \-﻿ Dev S.
+
+
+Here is an image from the web:
+
+![Sample Image](https://samrajya.dev/img/lord-shri-ganesha.jpg)
+
+And here is a local image:
+
+![Local Image](/media/images.gif)
