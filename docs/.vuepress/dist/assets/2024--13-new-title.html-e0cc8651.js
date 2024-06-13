@@ -1,0 +1,1 @@
+import{_ as e,p as t,q as _,R as o}from"./framework-5866ffd3.js";const s={},c=o("p",null,"Body Details",-1),n=[c];function l(a,r){return t(),_("div",null,n)}const d=e(s,[["render",l],["__file","2024--13-new-title.html.vue"]]);export{d as default};

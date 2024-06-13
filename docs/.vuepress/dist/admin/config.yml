@@ -57,9 +57,13 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Date", name: "date", widget: "datetime", format: "DD MMMM YYYY hh:mm A" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Draft", name: "draft", widget: "boolean" }
+      - { label: "Cover Image (Optional)", name: "cover_image", widget: "image", required: false }
+      - {label: "contributors", hint: "Show contributors at the footer", name: "contributors", widget: "boolean", default: true}
+      - {label: "lastUpdated", name: "lastUpdated", widget: "hidden", default: true}
+      
 
   - name: "songs"
     label: "Songs"
