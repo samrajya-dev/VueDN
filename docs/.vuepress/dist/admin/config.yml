@@ -1,44 +1,124 @@
-# https://decapcms.org/docs/backends-overview/
+# backend:
+#   name: git-gateway
+#   branch: main
+#   cms_label_prefix: decap-cms
+
+# publish_mode: editorial_workflow
+# display_url: https://samrajya.dev/
+
+# media_folder: "docs/.vuepress/public/media"
+# public_folder: "/media"
+
+# editor:
+#   preview: true
+
+# collections:
+#   - name: "blogs" # Used in routes, e.g., /admin/collections/songs
+#     label: "Posts"
+#     label_singular: Post
+#     folder: "docs/blogs"
+#     filter:
+#       field: language
+#       value: en
+#     create: true # Allow users to create new documents in this collection
+#     slug: "{{slug}}"
+#     summary: "{{serial}}. {{title}} {{publish_date | formatDate('DD MMMM YYYY')}}"
+#     preview_path: blogs/{{slug}}
+#     nested: 
+#       depth: 2
+#     fields: # The fields for each document, usually in front matter
+#       - {label: "lastUpdated", name: "lastUpdated", widget: "hidden", default: true}
+#       - { label: "Language", name: "language" }
+#       - { label: "Title", name: "title", widget: "string" }
+#       - { label: "Draft", name: "draft", widget: "boolean", default: false }
+#       - {label: "contributors", hint: "Show contributors at the footer", name: "contributors", widget: "boolean", default: true}
+#       - {label: "Show icon for external links", name: "externalLinkIcon", widget: "boolean", default: false}
+#       - { label: "Publish Date", name: "publish_date", widget: "datetime", format: "MM/DD/YYYY HH:mm:ss" }
+#     - { label: "Entry Date", name: "date", widget: "datetime", format: 'YYYY-MM-DD', time_format: true, required: true }
+      # - { label: "Cover Image (Optional)", name: "cover_image", widget: "image", required: false }
+      # - {label: "Body", name: "body", widget: "markdown", default: "# today's blog title - what's in your mind Dev?"}
+
+
 backend:
-  name: git-gateway # adds users without giving them direct write access to your GitHub or GitLab repository.
+  name: git-gateway
   branch: main
-  cms_label_prefix: decap-cms
-  # Options:
-  # name: github/gitlab/bitbucket # all users added must have push access to your content repository.
-  # repo: owner-name/repo-name # Path to your GitHub repository
+#   cms_label_prefix: decap-cms
 
-# https://decapcms.org/docs/configuration-options/
-publish_mode: editorial_workflow
-display_url: https://samrajya.dev/
-
-media_folder: "docs/.vuepress/public/media" # Media files will be stored in the repo under docs/.vuepress/public/media
-public_folder: "/media" # The src attribute for uploaded media will begin with /media
-
-editor:
-  preview: true
+media_folder: "docs/.vuepress/public/media"
+public_folder: "/media"
 
 collections:
-  - name: "blogs" # Used in routes, e.g., /admin/collections/songs
-    label: "Posts"
-    label_singular: Post
+  - name: "blogs"
+    label: "Blogs"
     folder: "docs/blogs"
-    filter:
-      field: language
-      value: en
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}"
-    summary: "{{serial}}. {{title}} {{publish_date | formatDate('DD MMMM YYYY')}}"
-    preview_path: blogs/{{slug}}
-    nested: 
-      depth: 2
-    fields: # The fields for each document, usually in front matter
-      - {label: "lastUpdated", name: "lastUpdated", widget: "hidden", default: true}
-      - { label: "Language", name: "language" }
+    create: true
+    slug: "{{year}}-{{MONTH}}-{{day}}-{{slug}}"
+    fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Draft", name: "draft", widget: "boolean", default: false }
-      - {label: "contributors", hint: "Show contributors at the footer", name: "contributors", widget: "boolean", default: true}
-      - {label: "Show icon for external links", name: "externalLinkIcon", widget: "boolean", default: false}
-      - { label: "Publish Date", name: "publish_date", widget: "datetime", format: "MM/DD/YYYY HH:mm:ss" }
-#     - { label: "Entry Date", name: "date", widget: "datetime", format: 'YYYY-MM-DD', time_format: true, required: true }
-      - { label: "Cover Image (Optional)", name: "cover_image", widget: "image", required: false }
-      - {label: "Body", name: "body", widget: "markdown", default: "# today's blog title - what's in your mind Dev?"}
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Draft", name: "draft", widget: "boolean" }
+
+  - name: "songs"
+    label: "Songs"
+    folder: "docs/songs"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Draft", name: "draft", widget: "boolean" }
+
+  - name: "posts"
+    label: "Posts"
+    folder: "docs/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Draft", name: "draft", widget: "boolean" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "docs/about.md"
+        label: "About"
+        name: "about"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "settings"
+    label: "Settings"
+    files:
+      - file: "docs/settings/site_metadata.json"
+        label: "Site Metadata"
+        name: "site_metadata"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Logo", name: "logo", widget: "image" }
+
+  - name: "authors"
+    label: "Authors"
+    folder: "docs/authors"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Bio", name: "bio", widget: "text" }
+      - { label: "Avatar", name: "avatar", widget: "image" }
+      - { label: "GitHub", name: "github", widget: "string" }
+      - { label: "Twitter", name: "twitter", widget: "string" }
+      - { label: "LinkedIn", name: "linkedin", widget: "string" }
+
+publish_mode: editorial_workflow
